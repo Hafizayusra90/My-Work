@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const contact = {
+           phoneNumber: '555-0981',
+            email: 'alex@gmail.com',
+            name: 'Alex',
+        address:{
+            city: 'karachi',
+            province: 'sindh',
+            country: 'Pakistan',
+            location:{
+                latitude: 24.123,
+                longitude: 67.123
+            }
+            
+        },
+        greet(){
+            return`Hello ${this.name}. My Email is ${this.email}`;
+        },
+    };
+    console.log(contact.greet());
+        // contact.linkedInId = 'something';
+        // console.log(contact);
+        // console.log(contact);
+        // delete contact.name;
+        // console.log(contact);
+
+    </script>
+</body>
+</html>

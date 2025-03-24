@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Code:wght@300..700&family=Lexend+Zetta:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Poppins;
+    
+}
+.box{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.05);
+    width:90%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 30px;
+}
+.navbar p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.btn-grp{
+    display: flex;
+    gap: 15px;
+}
+.btn, .plan{
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+.btn{
+    background-color: black;
+    color: white;
+}
+.plan:hover{
+background-color: black;
+color: white;
+transition: 1s;
+}
+.container{
+    display: flex;
+}
+.text-section{
+    padding-left:20px ;
+}
+.text-section h6{
+   margin-bottom: 0;
+   font-weight: 400;
+}
+.text-section h1{
+    margin-top: 0;
+}

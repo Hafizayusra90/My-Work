@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .done{
+    text-decoration: line-through;
+    color: blue;
+}
+    </style>
+    
+</head>
+<body>
+    <input type="text" name="to-do" id="input" placeholder="enter task">
+    <button id="btn">Add new task</button>
+    <ul class="to-do-list"></ul>
+    <script>
+        let input = document.querySelector('#input')
+        let btn = document.getElementById('btn')
+        let a = document.querySelector('.to-do-list')
+    // console.log(a)
+    
+    btn.addEventListener('click', addtask)
+    function addtask(){
+        if(input.value=='')
+        // you can aslso write if(!input.value) in programming ! is called not. 
+        {
+            alert('please enter your task.')
+            return
+        }
+    let li = document.createElement('li')
+        li.innerHTML= input.value
+        li.addEventListener('click',function(){
+            // li.classList.add('done') so we can style it and toggle is to use this to alternate changes
+            li.classList.toggle('done')
+        })
+        document.querySelector('.to-do-list').appendChild(li)
+        input.value=''
+    }
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-transform: uppercase;
+      }
+      .container {
+        height: 1500px;
+        margin: 100px 20px;
+      }
+      .static {
+        background-color: rgb(80, 80, 253);
+        color: aliceblue;
+        margin: 10px;
+        border: 1px solid rgb(116, 116, 116);
+        padding: 20px;
+        position: static;
+      }
+      .relative {
+        background-color: aquamarine;
+        color: aliceblue;
+        margin: 10px;
+        padding: 20px;
+        position: relative;
+        top: 300px;
+        left: 100px;
+      }
+      .absolute {
+        background-color: rgb(201, 201, 243);
+        color: rgb(0, 68, 255);
+        margin:10px ;
+        border: 1px solid black;
+        padding: 20px;
+        position: absolute;
+        top: 200px;
+      }
+      .sticky {
+        background-color: yellow;
+        color: aliceblue;
+        margin:10px ;
+        padding: 20px;
+        border: 1px solid black;
+        position: sticky;
+        top: 70px;
+        bottom: 70px;
+      }
+      .fixed{
+        background-color: aqua;
+        color: white;
+        margin:10px ;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+      }
+      header{
+        top:0;
+      }
+      footer{
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed">fixed header</header>
+    <div class="container">
+      <div class="static">Static position</div>
+      <div class="relative">Relative position</div>
+      <div class="absolute">Absolute position</div>
+      <div class="sticky">Sticky position</div>
+    </div>
+    <footer class="fixed">fixed footer</footer>
+  </body>
+</html>

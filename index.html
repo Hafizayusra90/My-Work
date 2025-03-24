@@ -1,0 +1,6 @@
+import os
+
+f = os.open("newfile.text",os.O_RDONLY)
+content =os.read(f,128)
+print(content)
+os . close()

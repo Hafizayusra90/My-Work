@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <style>
+      .form{
+          padding:10px:
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h1>User Information</h1>
+      <form action="#">
+        <label for="name">Name</label>
+        <input type="text" name="" id="name" />
+        <label for="D.O.B"> Date Of Birth</label>
+        <input type="date" name="D.O.B" id="D.O.B" />
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time">
+        <label for="Department"> Department</label>
+        <input type="text" name="Department" id="Department" />
+        <label for="email"> Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="password"> Password</label>
+        <input type="text" name="password" id="password" />
+        <label for="CV"> CV</label>
+        <input type="file" name="CV" id="CV" />
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="male"><input type="radio" name="gender" id="male" value="male">male</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="female">female</label>
+        </fieldset>
+        <fieldset>
+            <legend>Services</legend>
+            <label for="webdev"><input type="checkbox" name="Services" id="webdev" value="webdev">Web Development</label>
+            <label for="softdev"><input type="checkbox" name="Services" id="softdev" value="softdev">Software Development</label>
+            <label for="appdev"><input type="checkbox" name="Services" id="appdev" value="appdev"> Application Development</label>
+        </fieldset>
+
+        
+        <button type="reset">reset</button>
+        <button type="submit"> submit</button>
+      </form>
+    </div>
+  </body>
+</html>

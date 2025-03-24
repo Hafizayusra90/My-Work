@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Collection</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+      body {
+        margin: 0;
+        background-color: #f7f7f7;
+        font-family: "Noto Sans", sans-serif;
+      }
+
+      header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      main {
+        width: 90%;
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        color: #333;
+      }
+
+      .book-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .book-form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .book-form button {
+        background-color: #2980b9;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .book-form button:hover {
+        background-color: #3498db;
+      }
+
+      .clear-button {
+        background-color: red;
+        margin-top: 10px;
+      }
+      .clear-button:hover {
+        background-color: #e74c3c;
+      }
+
+      #bookList {
+        margin-top: 20px;
+      }
+      .book-item {
+        background-color: #ecf0f1;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .book-cover {
+        width: 80px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .book-details {
+        display: flex;
+        flex-direction: column;
+      }
+      .book-title {
+        font-weight: bold;
+        margin: 0 0 5px 0;
+      }
+      .book-author {
+        margin: 0;
+        font-style: italic;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Movie Collection</h2>
+    </header>
+    <main>
+      <h1>Movie Collection with Images</h1>
+      <div class="book-form">
+        <input type="text" id="movieTitle" placeholder="Enter Movie Title" />
+        <input type="text" id="moviePublisher" placeholder="Enter Publisher" />
+        <input type="text" id="movieImage" placeholder="Enter Image URL" />
+        <button id="addMovie">Add Movie</button>
+        <button id="clearMovies" class="clear-button">Clear All Movies</button>
+      </div>
+      <div id="movieList"></div>
+
+     
+    </main>
+
+
+    <script>
+      let addMovie = document.getElementById('addMovie')
+      let clearMovie = document.getElementById('clearMovies')
+
+      addMovie.addEventListener('click', addMovies)
+
+      function addMovies(){
+        let title = document.getElementById('movieTitle').value
+        let publisher = document.getElementById('moviePublisher').value
+        let image = document.getElementById('movieImage').value
+
+        if(!title || !publisher || !image){
+          alert('Please Enter all the values')
+          return
+        }
+        
+        let movie ={
+          title : title,
+          publisher :publisher,
+          image : image
+
+        }
+        // console.log(movie);
+
+        let movies = JSON.parse(localStorage.getItem('movies')) || []
+        movies.push(movie)
+        // console.log(movies);
+
+        localStorage.setItem('movies', JSON.stringify(movies))
+        
+        displayMovies(movie)
+        
+      }
+
+    function displayMovies(movie){
+      let div = document.createElement('div')
+        div.classList.add('movie-item')
+        div.innerHTML = ` <img src="${movie.image}" alt="Movie Cover" class="movie-image" width=100px>
+      <div class="info">
+        <p class="movie-name">${movie.title}</p>
+        <p class="movie-publisher">by ${movie.publisher}</p>
+      </div>`
+        document.getElementById('movieList').appendChild(div)
+        
+
+    }  
+let movies = JSON.parse(localStorage.getItem('movies'))
+console.log(movies);
+
+for (let index = 0; index < movies.length; index++) {
+  const element = movies[index];    
+       displayMovies(element)
+        
+
+
+  
+}
+
+
+    </script>
+  </body>
+</html>

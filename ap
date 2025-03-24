@@ -1,0 +1,16 @@
+# import os
+
+# f = os.open("newfile.text",os.O_RDONLY)
+# content =os.read(f,128)
+# print(content)
+# os . close()
+import date
+timestamp = date.strfdate('%Y:%M:%D')
+print(timestamp)
+timestamp = date.strfdate('%Y')
+print(timestamp)
+timestamp = date.strfdate('%M')
+print(timestamp)
+timestamp = date.strfdate('%D')
+print(timestamp)
+# https://docs.python.org/3/library/time.html#time.strftime

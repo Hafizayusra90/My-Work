@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables rowspan and colmspan</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table class="web-development">
+        <thead>
+            <tr>
+                <th>day</th>
+                <th>time</th>
+                <th>topic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <td>monday</td>
+                <td>10:00am-11:00am</td>
+                <td>web development</td>
+            </tr>
+            <tr> 
+                <td>tuesday</td>
+                <td>10:00am-11:00am</td>
+                <td>html</td>
+            </tr>
+            <tr> 
+                <td>wednesday</td>
+                <td>10:00am-11:00am</td>
+                <td>html table</td>
+            </tr>
+            <tr> 
+                <td>thursday</td>
+                <td>10:00am-11:00am</td>
+                <td>html list</td>
+            </tr>
+            <tr> 
+                <td>friday</td>
+                <td>10:00am-11:00am</td>
+                <td>html links</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <br>
+    <table class="course-scedule">
+        <thead class="course-scedule">
+            <tr class="course-scedule">
+                <th>day</th>
+                <th>time</th>
+                <th>topics</th>
+            </tr>
+        </thead>
+        <tbody class="course-scedule">
+            <tr>
+                <td rowspan="3"> Monday</td>
+                <td>10:00am-11:00am</td>
+                <td>web development</td>
+            </tr>
+            <tr>
+                <td> 11:00am-12:00pm</td>
+                <td> digital marketing</td>
+            </tr>
+            <tr>
+                <td> 12:00pm-01:00pm</td>
+                <td> python development</td>
+            </tr>
+            <tr>
+                <td> Tuesday</td>
+                <td colspan="2"> Off Day</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td> 10:am-11:00am</td>
+                <td> python development</td>
+            </tr>
+            <tr>
+                <td rowspan="2">thursday</td>
+                <td> 11:00am-12:pm</td>
+                <td> e-commerce</td>
+            </tr>
+            <tr>
+                <td colspan="2">Activity day</td>
+            </tr>
+            <tr>
+                <td rowspan="3"> friday</td>
+                <td> 11:00am-12:00pm</td>
+                <td rowspan="3">web development</td>
+            </tr> 
+            <tr>
+                <td> 12:00pm-01:00pm</td>
+               
+            </tr>
+            <tr>
+                <td> 01:00pm-02:00pm</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            color: aquamarine;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur perferendis, ipsum adipisci quisquam sint, voluptatum eum ullam veniam nobis assumenda aliquam laboriosam consequuntur libero modi voluptate eaque? Qui, modi ea.</p>
+
+    <button id="btn" onclick="changeText()">Subscribe</button>
+
+    <button class="btn1" onclick="addText()">Add a new Paragraph</button>
+    <div class="main-box"></div>
+
+    <script>
+        let a = document.querySelector('#para')
+        console.log(a);
+        // console.log(a.innerHTML);
+        a.innerHTML= '<u>This is my paragraph</u>'
+
+        let btn = document.querySelector('#btn')
+        function changeText(){
+
+            if (btn.innerHTML == 'Subscribe'){
+                btn.innerHTML = 'Subscribed'
+                btn.style.backgroundColor = 'green'
+            }
+            else{
+                btn.innerHTML = 'Subscribe'
+                btn.style.backgroundColor = 'red'
+
+            }
+        }
+function addText(){
+    let para = document.createElement('p')
+    para.innerHTML = 'This is my paragraph'
+    para.classList.add('para')
+    document.querySelector('.main-box').appendChild(para)
+    console.log(para);
+    
+    
+}
+        
+        
+    </script>
+</body>
+</html>

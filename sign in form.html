@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Input Form</title>
+    <link rel="stylesheet" href="sign in.css">
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <h2>Sign In</h2>
+        <div class="input-grp" >
+            <label for="Name">Name</label>
+            <input type="text" name="name" id="Name" placeholder="Enter you name">
+        </div>
+        <div class="input-grp" id="Email" >
+            <label for="Email">Email</label>
+            <input type="Email" name="email" id="Email" placeholder="Enter your email">
+
+            </label>
+        </div>
+        <div class="input-grp" id="Password">
+            <label for="Password" class="input-grp" id="name1">
+                <input type="password" name="password" id="" placeholder="Enter your password">
+            </label>
+        </div>
+        <div class="input-grp" id="Your Account">
+            <fieldset>
+                <legend>Choose Your Account Type</legend>
+                <label for="Your Account"><input type="radio" name="your account" id="personal" value="personal">Personal</label> 
+                <label for="Your Account"><input type="radio" name="your account" id="personal" value="business">business</label>
+            </fieldset>
+        </div>
+        <div>
+                <label for="Privacy Policy"><input type="checkbox" name="privacy policy" id="Privacy Policy" value="Privacy Policy">i agree to the <a href="#">privacy policy</a></label>
+        </div>
+        <button type="submit">Submit</button>
+        <p> Already have an Account?<a href="">sign in</a></p>
+      </form>
+    </div>
+  </body>
+</html>
